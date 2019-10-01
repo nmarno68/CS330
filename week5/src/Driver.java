@@ -1,7 +1,11 @@
 public class Driver {
 
     public static void main(String[] args){
-        SlotMachineFactory nv_factory = new NVFactory();
+        SlotMachineFactory nv = new NVFactory();
+        SlotMachine nv_straight = nv.orderSlot("straight");
+        nv_straight.prepare();
+        nv_straight.printSlot();
+        /*SlotMachineFactory nv_factory = new NVFactory();
         SlotMachineFactory nj_factory = new NJFactory();
         SlotMachineFactory wa_factory = new WAFactory();
 
@@ -17,6 +21,7 @@ public class Driver {
         System.out.println();
         System.out.println("WA Bonus Slot:");
 
-        wa_bonus.printSlot();
+        wa_bonus.printSlot();*/
+
     }
 }

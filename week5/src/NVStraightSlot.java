@@ -1,10 +1,14 @@
-public class NVStraightSlot extends SlotMachine {
+public class NVStraightSlot extends SlotMachine{
+    SlotTypeFactory nvFactory;
+    public NVStraightSlot(){}
+    public NVStraightSlot(SlotTypeFactory factory){
+        this.nvFactory = factory;
 
-    public NVStraightSlot(){
-        cabinet = "Large";
-        payment = "ticketinticketout";
-        display = "Reels";
-        gpu = "ARM";
-        os = "Linux";
+    }
+    public SlotMachine prepare(){
+        return nvFactory.createStraight();
+    }
+    public void printSlot(){
+        System.out.println("Cabinet: " + cabinet.toString() + "\nPayment: " + payment.toString() + "\nDisplay: " + display.toString() + "\nGPU: " + gpu.toString() + "\nOS: " + os.toString());
     }
 }

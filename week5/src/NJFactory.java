@@ -5,15 +5,12 @@ public class NJFactory extends SlotMachineFactory {
         SlotMachine newSlot;
 
         if( type.equals("bonus")){
-            newSlot = new NJBonusSlot();
         }
         else if(type.equals("progressive")){
-            newSlot = new NJProgressiveSlot();
         }
         else{
-            newSlot = new NJStraightSlot();
         }
 
-        return newSlot;
+        return null;
     }
 }
